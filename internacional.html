@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PARSIMON - Categoría Internacional</title>
+<meta content="Artículos y análisis sobre economía internacional, geopolítica y mercados globales." name="description"/>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Categoría Internacional",
+      "description": "Artículos y análisis sobre economía internacional en PARSIMON.",
+      "isPartOf": {
+        "@type": "Blog",
+        "name": "PARSIMON"
+      }
+    }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;family=Noto+Serif:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        "porcelain": "#fffffc",
+                        "black-pure": "#000000",
+                        "dark-bg": "#121212",
+                        "subtle-grey": "#595959",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"],
+                        "serif-heading": ["Noto Serif", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --bg-main: #fffffc;
+            --text-main: #000000;
+            --border-subtle: rgba(0, 0, 0, 0.1);
+            --focus-ring: #000000;
+        }
+        .dark {
+            --bg-main: #121212;
+            --text-main: #ffffff;
+            --border-subtle: rgba(255, 255, 255, 0.1);
+            --focus-ring: #ffffff;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            font-size: 18px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        .article-title {
+            font-family: 'Noto Serif', serif;
+        }
+        a:focus-visible, 
+        button:focus-visible, 
+        input:focus-visible, 
+        label:focus-visible {
+            outline: 2px solid var(--focus-ring);
+            outline-offset: 4px;
+            border-radius: 1px;
+        }
+        .group:focus-within .dropdown-menu {
+            display: block;
+        }
+        @media (min-width: 768px) {
+            .group:hover .dropdown-menu {
+                display: block;
+            }
+        }
+        .theme-switch-wrapper {
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            width: 56px;
+            height: 28px;
+            background-color: var(--text-main);
+            border-radius: 999px;
+            padding: 4px;
+            transition: background-color 0.2s;
+        }
+        .theme-switch-thumb {
+            position: absolute;
+            left: 4px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--bg-main);
+            border-radius: 50%;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+        }
+        #theme-toggle:checked ~ label .theme-switch-thumb {
+            transform: translateX(28px);
+        }
+        .theme-icon {
+            font-size: 14px !important;
+            z-index: 2;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            color: var(--bg-main);
+            transition: color 0.3s;
+        }
+        #theme-toggle:not(:checked) ~ label .sun-icon { color: var(--text-main); }
+        #theme-toggle:checked ~ label .moon-icon { color: var(--text-main); }
+        #mobile-menu-toggle:checked ~ #mobile-menu {
+            display: flex;
+        }
+        #mobile-categories-toggle:checked ~ #mobile-categories-list {
+            display: flex;
+        }
+        .header-shadow {
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .scrolled-header {
+            box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+        }
+    </style>
+</head>
+<body class="selection:bg-black-pure selection:text-porcelain dark:selection:bg-porcelain dark:selection:text-black-pure">
+<input aria-label="Cambiar entre modo claro y oscuro" class="sr-only" id="theme-toggle" onchange="document.documentElement.classList.toggle('dark')" type="checkbox"/>
+<header class="sticky top-0 z-50 bg-[var(--bg-main)] header-shadow transition-all duration-300" role="banner">
+<div class="max-w-[1000px] mx-auto px-6 h-24 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<a aria-label="PARSIMON - Ir al inicio" class="flex items-center gap-3 text-[var(--text-main)] font-bold no-underline group" href="/">
+<svg aria-hidden="true" class="size-8 transition-transform group-hover:scale-105" fill="currentColor" role="img" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+<span class="text-2xl tracking-tight font-extrabold">PARSIMON</span>
+</a>
+</div>
+<div class="flex items-center gap-8">
+<nav aria-label="Navegación principal" class="hidden md:flex items-center gap-8 h-full">
+<a class="text-sm font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-black-pure dark:hover:border-porcelain transition-all pb-1" href="/">Inicio</a>
+<div class="group relative h-full flex items-center">
+<button aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 text-sm font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-black-pure dark:hover:border-porcelain transition-all pb-1" id="cat-dropdown-btn">
+                        Categorías
+                        <span aria-hidden="true" class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div class="dropdown-menu hidden absolute top-[70px] -left-4 w-56 bg-[var(--bg-main)] border border-[var(--text-main)] shadow-2xl py-2" role="menu">
+<a class="block px-6 py-4 text-sm font-bold uppercase tracking-wider hover:bg-black-pure hover:text-porcelain dark:hover:bg-porcelain dark:hover:text-black-pure transition-colors" href="fiscal.html" role="menuitem">Fiscal</a>
+<a class="block px-6 py-4 text-sm font-bold uppercase tracking-wider hover:bg-black-pure hover:text-porcelain dark:hover:bg-porcelain dark:hover:text-black-pure transition-colors" href="financiero.html" role="menuitem">Financiero</a>
+<a class="block px-6 py-4 text-sm font-bold uppercase tracking-wider hover:bg-black-pure hover:text-porcelain dark:hover:bg-porcelain dark:hover:text-black-pure transition-colors" href="comercial.html" role="menuitem">Comercial</a>
+<a class="block px-6 py-4 text-sm font-bold uppercase tracking-wider hover:bg-black-pure hover:text-porcelain dark:hover:bg-porcelain dark:hover:text-black-pure transition-colors" href="internacional.html" role="menuitem">Internacional</a>
+</div>
+</div>
+<a class="text-sm font-bold uppercase tracking-widest border-b-2 border-transparent hover:border-black-pure dark:hover:border-porcelain transition-all pb-1" href="#">Sobre mí</a>
+</nav>
+<div class="flex items-center gap-4">
+<label aria-label="Alternar modo oscuro y claro" class="theme-switch-wrapper" for="theme-toggle" onkeydown="if(event.key==='Enter'||event.key===' '){document.getElementById('theme-toggle').click(); event.preventDefault();}" tabindex="0">
+<div class="theme-switch-thumb"></div>
+<span aria-hidden="true" class="material-symbols-outlined theme-icon sun-icon">light_mode</span>
+<span aria-hidden="true" class="material-symbols-outlined theme-icon moon-icon">dark_mode</span>
+</label>
+<div class="md:hidden flex items-center">
+<input class="sr-only" id="mobile-menu-toggle" type="checkbox"/>
+<label aria-label="Abrir menú" class="cursor-pointer p-2 flex items-center justify-center border border-transparent focus-within:border-[var(--text-main)]" for="mobile-menu-toggle">
+<span class="material-symbols-outlined text-[var(--text-main)] text-3xl">menu</span>
+</label>
+<div class="hidden fixed inset-0 top-24 bg-[var(--bg-main)] z-40 flex-col p-8 overflow-y-auto" id="mobile-menu">
+<a class="text-xl font-bold border-b border-[var(--border-subtle)] py-6 uppercase tracking-widest" href="/">Inicio</a>
+<div class="flex flex-col border-b border-[var(--border-subtle)]">
+<input class="sr-only" id="mobile-categories-toggle" type="checkbox"/>
+<label class="text-xl font-bold py-6 flex items-center justify-between cursor-pointer uppercase tracking-widest" for="mobile-categories-toggle">
+                                Categorías
+                                <span class="material-symbols-outlined">expand_more</span>
+</label>
+<div class="hidden flex-col bg-black/5 dark:bg-white/5 mb-4 rounded-sm" id="mobile-categories-list">
+<a class="text-lg py-4 px-6 border-b border-[var(--border-subtle)]" href="fiscal.html">Fiscal</a>
+<a class="text-lg py-4 px-6 border-b border-[var(--border-subtle)]" href="financiero.html">Financiero</a>
+<a class="text-lg py-4 px-6 border-b border-[var(--border-subtle)]" href="comercial.html">Comercial</a>
+<a class="text-lg py-4 px-6" href="internacional.html">Internacional</a>
+</div>
+</div>
+<a class="text-xl font-bold border-b border-[var(--border-subtle)] py-6 uppercase tracking-widest" href="#">Sobre mí</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="max-w-[1000px] mx-auto px-6 pt-8">
+<nav aria-label="Breadcrumb" class="flex">
+<ol class="inline-flex items-center space-x-1 md:space-x-3 text-[10px] uppercase tracking-[0.2em] font-medium text-subtle-grey/70">
+<li class="inline-flex items-center">
+<a class="hover:text-black-pure dark:hover:text-porcelain transition-colors flex items-center gap-1" href="/">
+<span class="material-symbols-outlined text-sm">home</span>
+                    Inicio
+                </a>
+</li>
+<li class="inline-flex items-center">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span aria-current="page">Internacional</span>
+</li>
+</ol>
+</nav>
+</div>
+<main class="max-w-[1000px] mx-auto px-6 pt-16 pb-32" id="main-content">
+<section class="mb-24 text-center md:text-left">
+<h1 class="article-title text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-[1.1]">Categoría Internacional</h1>
+<div class="max-w-2xl">
+<p class="text-xl md:text-2xl text-subtle-grey leading-relaxed dark:text-gray-300 font-normal border-l-[6px] border-black-pure dark:border-porcelain pl-8 italic">
+                Selección de análisis sobre economía internacional, geopolítica y mercados globales.
+            </p>
+</div>
+</section>
+<div class="mb-16 flex items-center gap-6">
+<h2 class="text-sm font-black uppercase tracking-[0.3em] text-[var(--text-main)] whitespace-nowrap">Artículos Internacionales</h2>
+<div class="h-[1px] w-full bg-[var(--text-main)] opacity-10"></div>
+</div>
+<div class="space-y-40">
+<article class="group" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-4 text-xs font-black text-subtle-grey uppercase tracking-[0.2em]">
+<time datetime="2023-10-22" itemprop="datePublished">22 Oct 2023</time>
+<span aria-hidden="true" class="opacity-30">•</span>
+<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<span itemprop="name">Redacción</span>
+</span>
+</div>
+<a class="block no-underline" href="#" itemprop="url">
+<h2 class="article-title text-4xl md:text-5xl font-bold leading-[1.2] tracking-tight group-hover:text-subtle-grey transition-colors duration-300" itemprop="headline">
+                        Fragmentación geoeconómica y nuevos bloques comerciales
+                    </h2>
+</a>
+<p class="text-[var(--text-main)] text-xl leading-relaxed max-w-3xl opacity-90" itemprop="description">
+                    Impacto de la geopolítica en inversiones, flujos de capital y comercio global.
+                </p>
+<div class="mt-4">
+<a class="inline-flex items-center text-sm font-black text-[var(--text-main)] uppercase tracking-[0.25em] border-b-[3px] border-black-pure dark:border-porcelain pb-1 transition-all duration-500 hover:pb-3 hover:translate-x-2 hover:opacity-70 group" href="#">
+                        Leer análisis completo <span aria-hidden="true" class="material-symbols-outlined text-xl ml-2 transition-transform duration-500 group-hover:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</article>
+<article class="group" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-4 text-xs font-black text-subtle-grey uppercase tracking-[0.2em]">
+<time datetime="2023-09-30" itemprop="datePublished">30 Sep 2023</time>
+<span aria-hidden="true" class="opacity-30">•</span>
+<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<span itemprop="name">Redacción</span>
+</span>
+</div>
+<a class="block no-underline" href="#" itemprop="url">
+<h2 class="article-title text-4xl md:text-5xl font-bold leading-[1.2] tracking-tight group-hover:text-subtle-grey transition-colors duration-300" itemprop="headline">
+                        Política monetaria global y spillovers en mercados emergentes
+                    </h2>
+</a>
+<p class="text-[var(--text-main)] text-xl leading-relaxed max-w-3xl opacity-90" itemprop="description">
+                    Efectos de las decisiones de bancos centrales sobre inflación y tipo de cambio.
+                </p>
+<div class="mt-4">
+<a class="inline-flex items-center text-sm font-black text-[var(--text-main)] uppercase tracking-[0.25em] border-b-[3px] border-black-pure dark:border-porcelain pb-1 transition-all duration-500 hover:pb-3 hover:translate-x-2 hover:opacity-70 group" href="#">
+                        Ver análisis internacional <span aria-hidden="true" class="material-symbols-outlined text-xl ml-2 transition-transform duration-500 group-hover:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<nav aria-label="Paginación de artículos" class="mt-48 flex flex-col items-center border-t border-[var(--border-subtle)] pt-24">
+<a class="group relative px-12 py-7 text-sm font-black text-porcelain bg-black-pure dark:bg-porcelain dark:text-black-pure transition-all duration-500 uppercase tracking-[0.3em] hover:bg-subtle-grey dark:hover:bg-white hover:-translate-y-2 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.15)] active:scale-95 flex items-center gap-4 overflow-hidden rounded-sm" href="/">
+            Volver al inicio
+            <span aria-hidden="true" class="material-symbols-outlined transition-transform duration-500 group-hover:translate-x-1">arrow_forward</span>
+</a>
+</nav>
+</main>
+<footer class="bg-[var(--bg-main)] py-32 border-t border-[var(--border-subtle)]" role="contentinfo">
+<div class="max-w-[1000px] mx-auto px-6 text-center">
+<div class="flex justify-center gap-16 mb-16">
+<a aria-label="Suscribirse al feed RSS" class="text-[var(--text-main)] hover:scale-125 transition-transform duration-300" href="#">
+<span aria-hidden="true" class="material-symbols-outlined text-4xl">rss_feed</span>
+</a>
+<a aria-label="Enviar un correo electrónico" class="text-[var(--text-main)] hover:scale-125 transition-transform duration-300" href="#">
+<span aria-hidden="true" class="material-symbols-outlined text-4xl">mail</span>
+</a>
+<a aria-label="Compartir este sitio" class="text-[var(--text-main)] hover:scale-125 transition-transform duration-300" href="#">
+<span aria-hidden="true" class="material-symbols-outlined text-4xl">share</span>
+</a>
+</div>
+<div class="max-w-xl mx-auto">
+<p class="text-[11px] text-subtle-grey uppercase tracking-[0.25em] leading-loose font-bold mb-4">
+                © 2024 PARSIMON. Pensamiento económico crítico para un mundo en constante cambio.
+            </p>
+<p class="text-[10px] text-subtle-grey uppercase tracking-[0.2em] opacity-50">
+                Optimizado para máxima accesibilidad y legibilidad tipográfica.
+            </p>
+</div>
+</div>
+</footer>
+<script>
+    const dropBtn = document.getElementById('cat-dropdown-btn');
+    const dropMenu = dropBtn?.nextElementSibling;
+    if (dropBtn && dropMenu) {
+        dropBtn.addEventListener('click', (e) => {
+            const isExpanded = dropBtn.getAttribute('aria-expanded') === 'true';
+            dropBtn.setAttribute('aria-expanded', !isExpanded);
+            e.stopPropagation();
+        });
+        document.addEventListener('click', () => {
+            dropBtn.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelector('.group').addEventListener('focusout', (e) => {
+            if (!e.currentTarget.contains(e.relatedTarget)) {
+                dropBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 20) {
+            header.classList.add('scrolled-header');
+        } else {
+            header.classList.remove('scrolled-header');
+        }
+    });
+</script>
+
+</body></html>
