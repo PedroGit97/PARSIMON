@@ -225,10 +225,7 @@
 <span class="text-sm text-subtle-grey font-medium italic tracking-wide">Espacio publicitario optimizado para una lectura sin distracciones</span>
 </div>
 </aside>
-<div class="border border-[var(--border-subtle)] rounded-sm p-12 text-center">
-<p class="text-sm font-black uppercase tracking-[0.3em] text-subtle-grey">Sin artículos publicados</p>
-<p class="mt-4 text-lg text-subtle-grey">Próximamente se publicarán nuevos análisis.</p>
-</div>
+<div class="space-y-64" data-articles-index></div>
 </main>
 <footer class="bg-[var(--bg-main)] py-32 border-t border-[var(--border-subtle)]" role="contentinfo">
 <div class="max-w-[1000px] mx-auto px-6 text-center">
@@ -253,6 +250,7 @@
 </div>
 </div>
 </footer>
+<script src="articles.js"></script>
 <script>
     const dropBtn = document.getElementById('cat-dropdown-btn');
     const dropMenu = dropBtn?.nextElementSibling;

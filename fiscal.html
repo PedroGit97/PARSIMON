@@ -219,10 +219,7 @@
 <h2 class="text-sm font-black uppercase tracking-[0.3em] text-[var(--text-main)] whitespace-nowrap">Artículos Fiscales</h2>
 <div class="h-[1px] w-full bg-[var(--text-main)] opacity-10"></div>
 </div>
-<div class="border border-[var(--border-subtle)] rounded-sm p-12 text-center">
-<p class="text-sm font-black uppercase tracking-[0.3em] text-subtle-grey">Sin artículos publicados</p>
-<p class="mt-4 text-lg text-subtle-grey">Próximamente se publicarán análisis fiscales.</p>
-</div>
+<div class="space-y-40" data-articles-category data-category="fiscal"></div>
 <nav aria-label="Paginación de artículos" class="mt-48 flex flex-col items-center border-t border-[var(--border-subtle)] pt-24">
 <a class="group relative px-12 py-7 text-sm font-black text-porcelain bg-black-pure dark:bg-porcelain dark:text-black-pure transition-all duration-500 uppercase tracking-[0.3em] hover:bg-subtle-grey dark:hover:bg-white hover:-translate-y-2 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_25px_50px_-12px_rgba(255,255,255,0.15)] active:scale-95 flex items-center gap-4 overflow-hidden rounded-sm" href="./index.html">
             Volver al inicio
@@ -253,6 +250,7 @@
 </div>
 </div>
 </footer>
+<script src="articles.js"></script>
 <script>
     const dropBtn = document.getElementById('cat-dropdown-btn');
     const dropMenu = dropBtn?.nextElementSibling;
