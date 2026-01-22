@@ -6,7 +6,7 @@ const articles = [
     author: "Redacción",
     category: "finanzas",
     excerpt: "Cambios en la inflación global, desglobalización y efectos en políticas fiscales.",
-    url: "articulo.html"
+    url: "./pages/articulo.html"
   }
 ];
 
@@ -82,3 +82,4 @@ window.addEventListener("DOMContentLoaded", () => {
   renderIndex();
   renderCategory();
 });
+
