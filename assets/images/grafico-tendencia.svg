@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fffffc"/>
+  <rect x="60" y="80" width="1080" height="470" rx="12" fill="#f6f6f0" stroke="#0a0a0a" stroke-width="2"/>
+  <g stroke="#0a0a0a" stroke-width="4" fill="none">
+    <path d="M120 460 L260 380 L400 430 L540 310 L680 360 L820 260 L960 300"/>
+  </g>
+  <g fill="#0a0a0a">
+    <circle cx="120" cy="460" r="6"/>
+    <circle cx="260" cy="380" r="6"/>
+    <circle cx="400" cy="430" r="6"/>
+    <circle cx="540" cy="310" r="6"/>
+    <circle cx="680" cy="360" r="6"/>
+    <circle cx="820" cy="260" r="6"/>
+    <circle cx="960" cy="300" r="6"/>
+  </g>
+  <text x="100" y="140" font-family="Work Sans, sans-serif" font-size="28" font-weight="700" fill="#0a0a0a">Gráfico de tendencia</text>
+  <text x="100" y="180" font-family="Work Sans, sans-serif" font-size="16" fill="#595959">Placeholder — reemplazar con datos reales</text>
+</svg>

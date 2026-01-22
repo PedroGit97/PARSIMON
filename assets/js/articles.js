@@ -6,7 +6,9 @@ const articles = [
     author: "Redacción",
     category: "finanzas",
     excerpt: "Cambios en la inflación global, desglobalización y efectos en políticas fiscales.",
-    url: "./pages/articulo.html"
+    url: "pages/articulo.html",
+    image: "assets/images/grafico-tendencia.svg",
+    imageAlt: "Gráfico de tendencia económica"
   }
 ];
 
@@ -24,6 +26,8 @@ function formatDate(iso) {
 }
 
 function renderArticles(list, container, limit) {
+  const inPages = window.location.pathname.includes("/pages/");
+  const basePath = inPages ? "../" : "./";
   const items = list.sort(byDateDesc).slice(0, limit ?? list.length);
   if (!items.length) {
     container.innerHTML = `
@@ -45,16 +49,20 @@ function renderArticles(list, container, limit) {
               <span itemprop="name">${a.author}</span>
             </span>
           </div>
-          <a class="block no-underline" href="${a.url}" itemprop="url">
+          <a class="block no-underline" href="${basePath}${a.url}" itemprop="url">
             <h2 class="article-title text-4xl md:text-5xl font-bold leading-[1.2] tracking-tight group-hover:text-subtle-grey transition-colors duration-300" itemprop="headline">
               ${a.title}
             </h2>
           </a>
+          ${a.image ? `
+          <figure class="border border-[var(--border-subtle)] rounded-sm overflow-hidden">
+            <img src="${basePath}${a.image}" alt="${a.imageAlt || ""}" class="w-full h-auto"/>
+          </figure>` : ""}
           <p class="text-[var(--text-main)] text-xl leading-relaxed max-w-3xl opacity-90" itemprop="description">
             ${a.excerpt}
           </p>
           <div class="mt-4">
-            <a class="inline-flex items-center text-sm font-black text-[var(--text-main)] uppercase tracking-[0.25em] border-b-[3px] border-black-pure dark:border-porcelain pb-1 transition-all duration-500 hover:pb-3 hover:translate-x-2 hover:opacity-70 group" href="${a.url}">
+            <a class="inline-flex items-center text-sm font-black text-[var(--text-main)] uppercase tracking-[0.25em] border-b-[3px] border-black-pure dark:border-porcelain pb-1 transition-all duration-500 hover:pb-3 hover:translate-x-2 hover:opacity-70 group" href="${basePath}${a.url}">
               Leer análisis completo <span aria-hidden="true" class="material-symbols-outlined text-xl ml-2 transition-transform duration-500 group-hover:translate-x-2">arrow_right_alt</span>
             </a>
           </div>
@@ -82,4 +90,5 @@ window.addEventListener("DOMContentLoaded", () => {
   renderIndex();
   renderCategory();
 });
+
 
